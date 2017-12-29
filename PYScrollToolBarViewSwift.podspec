@@ -1,42 +1,23 @@
-#
-# Be sure to run `pod lib lint PYScrollToolBarViewSwift.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = 'PYScrollToolBarViewSwift'
-  s.version          = '0.1.0'
+  s.version          = '0.1.7'
   s.summary          = 'A short description of PYScrollToolBarViewSwift.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+s.summary          = '多个scrollView组合的组件'
+s.license = 'MIT'
+s.description      = <<-DESC
+1. 随着底部的scrollView的滚动，topView与toolBarView也跟着上下滚动。
+2.  toolBarView的到顶部的时候悬停
+DESC
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.homepage         = 'https://github.com/LiPengYue/PYScrollToolBarView_SwiftPod'
 
-  s.homepage         = 'https://github.com/LiPengYue/PYScrollToolBarViewSwift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'LiPengYue' => '702029772@qq.com' }
-  s.source           = { :git => 'https://github.com/LiPengYue/PYScrollToolBarViewSwift.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/LiPengYue/PYScrollToolBarView_SwiftPod.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PYScrollToolBarViewSwift/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PYScrollToolBarViewSwift' => ['PYScrollToolBarViewSwift/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

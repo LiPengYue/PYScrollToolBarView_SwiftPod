@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		08CEC92EB448079ECAFC18F6 /* Pods_PYScrollToolBarViewSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PYScrollToolBarViewSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FD21A4BA448A7223EA2E0B /* Pods-PYScrollToolBarViewSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Tests/Pods-PYScrollToolBarViewSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		410A310CC208D5CD61758969 /* PYScrollToolBarViewSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PYScrollToolBarViewSwift.podspec; path = ../PYScrollToolBarViewSwift.podspec; sourceTree = "<group>"; };
+		410A310CC208D5CD61758969 /* PYScrollToolBarViewSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PYScrollToolBarViewSwift.podspec; path = ../PYScrollToolBarViewSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		57BC193557C9E8E71F56E4E6 /* Pods-PYScrollToolBarViewSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Example/Pods-PYScrollToolBarViewSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		59B5A716A2E96356D0EA5571 /* Pods_PYScrollToolBarViewSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PYScrollToolBarViewSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* PYScrollToolBarViewSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYScrollToolBarViewSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +45,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8FB5BC619BCAE6B629522808 /* Pods-PYScrollToolBarViewSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Example/Pods-PYScrollToolBarViewSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A85A22611F507BBA255F9E2D /* Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Tests/Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D4B121F491E87BCB8AD4FFF7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		FCA7BB147AD91757EF78ABDF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D4B121F491E87BCB8AD4FFF7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FCA7BB147AD91757EF78ABDF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
