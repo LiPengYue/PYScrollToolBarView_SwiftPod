@@ -158,7 +158,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         
         self.configure(toolBarView: toolBarView!, topView: topView, bottomViewArray: bottomViewArray, topViewH: topViewH, toolBarViewH: toolBarView_h, toolBarViewMargin: midViewMargin, isHaveTabBar: isHaveTabBar)
     }
-    init(frame: CGRect,toolBarView: PYToolBarView, topView: UIView?, bottomViewArray: [UIView], topViewH: CGFloat, toolBarViewH: CGFloat, toolBarViewMargin: CGFloat, isHaveTabBar: Bool) {
+    public init(frame: CGRect,toolBarView: PYToolBarView, topView: UIView?, bottomViewArray: [UIView], topViewH: CGFloat, toolBarViewH: CGFloat, toolBarViewMargin: CGFloat, isHaveTabBar: Bool) {
         self.isBottomScrollViewPagingEnabled = true
         self.isBottomScrollViewBounces = true
         self.newValue = CGPoint(x: 0, y: 0)
