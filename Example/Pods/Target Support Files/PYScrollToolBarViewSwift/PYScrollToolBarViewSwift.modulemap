@@ -1,0 +1,6 @@
+framework module PYScrollToolBarViewSwift {
+  umbrella header "PYScrollToolBarViewSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "PYScrollToolBarViewSwift",
+  "version": "0.1.0",
+  "summary": "A short description of PYScrollToolBarViewSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/LiPengYue/PYScrollToolBarViewSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "LiPengYue": "702029772@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/LiPengYue/PYScrollToolBarViewSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PYScrollToolBarViewSwift/Classes/**/*"
+}
