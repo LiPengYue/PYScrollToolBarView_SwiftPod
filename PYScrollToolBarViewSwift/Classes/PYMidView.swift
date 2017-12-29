@@ -15,7 +15,7 @@ open class PYMidView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
     }
-   open var delegate: PYToolBarViewProtocol?
+    open var delegate: PYToolBarViewProtocol?
     open var isFirstSetToolBarUI: Bool = true
     
     override open func layoutSubviews() {

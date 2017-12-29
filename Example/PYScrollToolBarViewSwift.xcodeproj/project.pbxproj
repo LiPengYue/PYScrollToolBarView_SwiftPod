@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		5D0FC3F5B9A18614AFB82743 /* Pods_PYScrollToolBarViewSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B5A716A2E96356D0EA5571 /* Pods_PYScrollToolBarViewSwift_Example.framework */; };
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		8610E86C1FF612AF00ADAECC /* KRGoldCoinMallDecorate_MidToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E8671FF612AE00ADAECC /* KRGoldCoinMallDecorate_MidToolBarView.swift */; };
+		8610E86D1FF612AF00ADAECC /* KRKnapsackDecorateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E8681FF612AE00ADAECC /* KRKnapsackDecorateView.swift */; };
+		8610E86E1FF612AF00ADAECC /* KRKnapsackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E8691FF612AF00ADAECC /* KRKnapsackHeaderView.swift */; };
+		8610E86F1FF612AF00ADAECC /* KRKnapsackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E86A1FF612AF00ADAECC /* KRKnapsackView.swift */; };
+		8610E8701FF612AF00ADAECC /* KRGoldCoinMallDecorate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E86B1FF612AF00ADAECC /* KRGoldCoinMallDecorate.swift */; };
+		8610E8791FF612D100ADAECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E8721FF612D100ADAECC /* AppDelegate.swift */; };
+		8610E87A1FF612D100ADAECC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8731FF612D100ADAECC /* LaunchScreen.xib */; };
+		8610E87B1FF612D100ADAECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8751FF612D100ADAECC /* Main.storyboard */; };
+		8610E87C1FF612D100ADAECC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8771FF612D100ADAECC /* Images.xcassets */; };
+		8610E87D1FF612D100ADAECC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8781FF612D100ADAECC /* Info.plist */; };
+		8610E87F1FF615E700ADAECC /* PYSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E87E1FF615E700ADAECC /* PYSize.swift */; };
 		AB7D59AAB07B328D52065D31 /* Pods_PYScrollToolBarViewSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CEC92EB448079ECAFC18F6 /* Pods_PYScrollToolBarViewSwift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,14 +42,21 @@
 		59B5A716A2E96356D0EA5571 /* Pods_PYScrollToolBarViewSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PYScrollToolBarViewSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* PYScrollToolBarViewSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYScrollToolBarViewSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PYScrollToolBarViewSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYScrollToolBarViewSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		8610E8671FF612AE00ADAECC /* KRGoldCoinMallDecorate_MidToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRGoldCoinMallDecorate_MidToolBarView.swift; sourceTree = "<group>"; };
+		8610E8681FF612AE00ADAECC /* KRKnapsackDecorateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRKnapsackDecorateView.swift; sourceTree = "<group>"; };
+		8610E8691FF612AF00ADAECC /* KRKnapsackHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRKnapsackHeaderView.swift; sourceTree = "<group>"; };
+		8610E86A1FF612AF00ADAECC /* KRKnapsackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRKnapsackView.swift; sourceTree = "<group>"; };
+		8610E86B1FF612AF00ADAECC /* KRGoldCoinMallDecorate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KRGoldCoinMallDecorate.swift; sourceTree = "<group>"; };
+		8610E8721FF612D100ADAECC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8610E8741FF612D100ADAECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8610E8761FF612D100ADAECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8610E8771FF612D100ADAECC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8610E8781FF612D100ADAECC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8610E87E1FF615E700ADAECC /* PYSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PYSize.swift; sourceTree = "<group>"; };
 		8FB5BC619BCAE6B629522808 /* Pods-PYScrollToolBarViewSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Example/Pods-PYScrollToolBarViewSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A85A22611F507BBA255F9E2D /* Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Tests/Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D4B121F491E87BCB8AD4FFF7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -102,11 +116,10 @@
 		607FACD21AFB9204008FA782 /* Example for PYScrollToolBarViewSwift */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				8610E8781FF612D100ADAECC /* Info.plist */,
+				8610E8711FF612D100ADAECC /* other */,
+				8610E8661FF612A000ADAECC /* demo */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for PYScrollToolBarViewSwift";
@@ -157,6 +170,30 @@
 				A85A22611F507BBA255F9E2D /* Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8610E8661FF612A000ADAECC /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				8610E87E1FF615E700ADAECC /* PYSize.swift */,
+				8610E8671FF612AE00ADAECC /* KRGoldCoinMallDecorate_MidToolBarView.swift */,
+				8610E86B1FF612AF00ADAECC /* KRGoldCoinMallDecorate.swift */,
+				8610E8681FF612AE00ADAECC /* KRKnapsackDecorateView.swift */,
+				8610E8691FF612AF00ADAECC /* KRKnapsackHeaderView.swift */,
+				8610E86A1FF612AF00ADAECC /* KRKnapsackView.swift */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		8610E8711FF612D100ADAECC /* other */ = {
+			isa = PBXGroup;
+			children = (
+				8610E8721FF612D100ADAECC /* AppDelegate.swift */,
+				8610E8731FF612D100ADAECC /* LaunchScreen.xib */,
+				8610E8751FF612D100ADAECC /* Main.storyboard */,
+				8610E8771FF612D100ADAECC /* Images.xcassets */,
+			);
+			path = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				8610E87A1FF612D100ADAECC /* LaunchScreen.xib in Resources */,
+				8610E87B1FF612D100ADAECC /* Main.storyboard in Resources */,
+				8610E87C1FF612D100ADAECC /* Images.xcassets in Resources */,
+				8610E87D1FF612D100ADAECC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,8 +417,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8610E8791FF612D100ADAECC /* AppDelegate.swift in Sources */,
+				8610E86E1FF612AF00ADAECC /* KRKnapsackHeaderView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				8610E87F1FF615E700ADAECC /* PYSize.swift in Sources */,
+				8610E86C1FF612AF00ADAECC /* KRGoldCoinMallDecorate_MidToolBarView.swift in Sources */,
+				8610E8701FF612AF00ADAECC /* KRGoldCoinMallDecorate.swift in Sources */,
+				8610E86F1FF612AF00ADAECC /* KRKnapsackView.swift in Sources */,
+				8610E86D1FF612AF00ADAECC /* KRKnapsackDecorateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,20 +447,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		8610E8731FF612D100ADAECC /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
+				8610E8741FF612D100ADAECC /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8610E8751FF612D100ADAECC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8610E8761FF612D100ADAECC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

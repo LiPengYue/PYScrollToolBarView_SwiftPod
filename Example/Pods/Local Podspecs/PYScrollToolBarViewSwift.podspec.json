@@ -1,6 +1,6 @@
 {
   "name": "PYScrollToolBarViewSwift",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "summary": "多个scrollView组合的组件",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/LiPengYue/PYScrollToolBarView_SwiftPod.git",
-    "tag": "0.1.7"
+    "tag": "0.1.8"
   },
   "platforms": {
     "ios": "8.0"
