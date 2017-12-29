@@ -45,6 +45,12 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         }
     }
     
+    ///底部的scrollView的颜色
+    public var bottomScrollViewColor: UIColor = UIColor.white {
+        didSet {
+            self.bottomScrollView.backgroundColor = bottomScrollViewColor
+        }
+    }
     
     ///底部是否有弹簧效果
    public var isBottomScrollViewBounces: Bool {
@@ -284,7 +290,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
     
     ///布局bottomScrollView (内部进行了subView布局，contentSize赋值)
     private func setupBottomScrollView() {
-        self.bottomScrollView.backgroundColor = UIColor.red
+        
         //设置frame
         self.bottomScrollView.frame = CGRect(x: 0, y: 0, width: self.kToolBarScrollViewW, height: self.kBottomScrollViewH)
         //设置contentSize
