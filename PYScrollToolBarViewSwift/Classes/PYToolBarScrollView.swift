@@ -138,7 +138,8 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
     let bottomScrollViewTag: NSInteger = 10001
     private var tabBarH = 49.0 //tabBar的高度
     private var midView: PYMidView?
-    
+    ///因为在刚刚加载到页面的时候，走了observe方法，改变了topview与midToolBarView的高度，因而，在hitText方法中，置为true，以免布局不准确
+    private var isTouched: Bool = false
     private var oldValue: CGFloat = 0.0
     
     //MARK: ----------------- init --------------------
@@ -293,6 +294,12 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         
         //设置frame
         self.bottomScrollView.frame = CGRect(x: 0, y: 0, width: self.kToolBarScrollViewW, height: self.kBottomScrollViewH)
+        if #available(iOS 11.0, *) {
+            self.contentInsetAdjustmentBehavior = .never
+            self.bottomScrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            // Fallback on earlier versions
+        }
         //设置contentSize
         self.bottomScrollView.contentSize = CGSize(width: kToolBarScrollViewW * CGFloat (self.bottomViewArray.count), height: kBottomScrollViewH)
         //代理
@@ -329,7 +336,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
                 let scrollView: UIScrollView = view as! UIScrollView
                 scrollView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
                 scrollView.contentInset = UIEdgeInsetsMake(kTopViewH + kMidToolBarViewH, 0, 0, 0);
-                scrollView.contentOffset = CGPoint.init(x: 0, y: -kTopViewH)
+                scrollView.contentOffset = CGPoint.init(x: 0, y: -kTopViewH - kMidToolBarViewH)
                 if #available(iOS 11.0, *) {
                     scrollView.contentInsetAdjustmentBehavior = .never
                 } else {
@@ -356,7 +363,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
     override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "contentOffset" {
             
-            if kTopViewH <= 0 {
+            if kTopViewH <= 0 || !isTouched{
                 return
             }
             //获取偏移量
@@ -485,6 +492,11 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         }else{
             scrollView.contentInset = UIEdgeInsetsMake(scrollView.contentInset.top, 0, 0, 0)
         }
+    }
+    
+    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        isTouched = true
+        return super.hitTest(point, with: event)
     }
 }
 
