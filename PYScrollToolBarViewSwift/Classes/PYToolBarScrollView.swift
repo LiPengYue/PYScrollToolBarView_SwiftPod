@@ -391,6 +391,8 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
                 self.topView.setY(Y: 0)
                 midView.setY(Y: kTopViewH)
             }
+        }else{
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
     
@@ -398,8 +400,6 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         if scrollView.tag == bottomScrollViewTag {
             //拿到滚动的下标
             let indexFloat = scrollView.contentOffset.x / self.frame.size.width
-            
-            //平衡contentOffset
             let frontIndex = midToolBarView.selectOptionIndex
             let bottomViewCont = bottomViewArray.count
             if indexFloat > CGFloat(frontIndex) {

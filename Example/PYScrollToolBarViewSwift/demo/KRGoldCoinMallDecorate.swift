@@ -43,7 +43,7 @@ class KRGoldCoinMallDecorate: UITableView,UITableViewDelegate,UITableViewDataSou
     
     //MARK: - 代理
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 111
+        return 12
     }
     ///数据原方法
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
