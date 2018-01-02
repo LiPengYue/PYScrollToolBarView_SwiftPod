@@ -45,7 +45,8 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         }
     }
     
-    ///底部的scrollView的颜色
+    
+    ///底部的scrollView 的颜色
     public var bottomScrollViewColor: UIColor = UIColor.white {
         didSet {
             self.bottomScrollView.backgroundColor = bottomScrollViewColor
@@ -210,6 +211,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.bottomViewArray = bottomViewArray//里面会重新布局
         self.isHaveTabBar = isHaveTabBar
+        self.contentOffset = CGPoint.init(x: 0, y: 0)
         self.delegate = self
     }
     
@@ -291,6 +293,8 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
     
     ///布局bottomScrollView (内部进行了subView布局，contentSize赋值)
     private func setupBottomScrollView() {
+        
+        self.bottomScrollView.backgroundColor = bottomScrollViewColor
         
         //设置frame
         self.bottomScrollView.frame = CGRect(x: 0, y: 0, width: self.kToolBarScrollViewW, height: self.kBottomScrollViewH)
@@ -391,8 +395,6 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
                 self.topView.setY(Y: 0)
                 midView.setY(Y: kTopViewH)
             }
-        }else{
-            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
     
@@ -400,6 +402,8 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         if scrollView.tag == bottomScrollViewTag {
             //拿到滚动的下标
             let indexFloat = scrollView.contentOffset.x / self.frame.size.width
+            
+            //平衡contentOffset
             let frontIndex = midToolBarView.selectOptionIndex
             let bottomViewCont = bottomViewArray.count
             if indexFloat > CGFloat(frontIndex) {
@@ -434,11 +438,14 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
                 
                 self.midToolBarView.selectOptionIndex = index_
                 
+                //                if self.bottomViewArray[index_] is UIScrollView {
+                
                 let title = self.midToolBarView.optionTitleStrArray[index_]
                 let button = self.midToolBarView.optionArray[index_]
                 
                 //改变相邻的scrollView的contentOffset
                 self.changedPageNumberCallBack?(index_,title,button)
+                //                }
             }
         }
         
