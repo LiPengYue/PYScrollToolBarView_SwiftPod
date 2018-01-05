@@ -124,7 +124,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
     private var kMidToolBarViewMargin: CGFloat = 0//self.MidToolBarView距离self左右边界的距离
     private var kIsSetFrame: Bool = true//第一次默认设置空间的frame
     private let bottomScrollView: UIScrollView = UIScrollView()//底部滑动的scrollView
-    
+    //    private let isClickMidToolBarView
     //记录一下当前底部的scrollView的subView的偏移量
     private var newValue: CGPoint {
         didSet (value){
@@ -272,6 +272,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         
         
         self.midToolBarView.clickOptionCallBackFunc { [weak self] (button, title, index) in
+            //            self?.setWellScrollViewOffset(wellIndex: self?.midToolBarView.oldIndex ?? 0, frontIndex:self?.midToolBarView.selectOptionIndex ?? 0)
             self?.bottomScrollView.contentOffset = CGPoint(x:CGFloat(index)
                 * (self?.kToolBarScrollViewW)!, y: 0)
         }
@@ -406,22 +407,8 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
             //平衡contentOffset
             let frontIndex = midToolBarView.selectOptionIndex
             let bottomViewCont = bottomViewArray.count
-            if indexFloat > CGFloat(frontIndex) {
-                let wellIndex = frontIndex + 1
-                if wellIndex >= bottomViewCont {
-                    return
-                }
-                //表示 index ++ 趋势
-                setWellScrollViewOffset(wellIndex: wellIndex, frontIndex: frontIndex)
-            }else{
-                //表示 index -- 趋势
-                let wellIndex = frontIndex - 1
-                if wellIndex < 0 {
-                    return
-                }
-                setWellScrollViewOffset(wellIndex: wellIndex, frontIndex: frontIndex)
-            }
             
+            setWellScrollViewOffset(wellIndex: self.midToolBarView.oldIndex,  frontIndex: frontIndex)
             let index = round(indexFloat)
             //滚动时候回调
             self.scrollingBottomScrollViewCallBack?(scrollView.contentOffset)

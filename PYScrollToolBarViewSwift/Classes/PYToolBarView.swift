@@ -10,6 +10,7 @@ import UIKit
 ///toolBarViewOptionTag值统一都加了1000
 let toolBarViewOptionTagBasis: NSInteger = 1000
 
+
 public class PYToolBarView: UIView {
     
     //MARK: --------------- 私有属性 --------------------------
@@ -38,7 +39,8 @@ public class PYToolBarView: UIView {
     
     ///将要改变当前选中button的方法
     public var willChangeCurrentIndexBlock: ((_ fromeIndex:NSInteger, _ toIndex: NSInteger) -> (Bool))?
-    
+    ///上一次选择的toolBarINdex
+    public var oldIndex: NSInteger = 0;
     
     //MARK: ------------------ 下面的开始属性的设置 -------------------------
     
@@ -110,7 +112,7 @@ public class PYToolBarView: UIView {
     
     
     ///线的位置集合 (只读计算属性)
-     public var lineFrameArray: [NSValue] {
+    public var lineFrameArray: [NSValue] {
         get {
             return _lineFrameArray
         }
@@ -189,6 +191,7 @@ public class PYToolBarView: UIView {
             if (_selectOptionIndex == newValue) && !self.isRecurClick{
                 return
             }
+            
             let fromeIndex: NSInteger = _selectOptionIndex
             _selectOptionIndex = newValue//必须赋值成功
             if self.optionArray.count == 0 {
@@ -437,17 +440,21 @@ private extension PYToolBarView {
         //将要改变当前选中button的方法
         let fromIndex: NSInteger = self.selectOption.tag - toolBarViewOptionTagBasis
         let toIndex: NSInteger = option.tag - toolBarViewOptionTagBasis
+        
+        //如果选中的与现在选中的一致，那么不做selected操作 在了index的计算属性的 setter方法里面设置
         if (self.willChangeCurrentIndexBlock?(fromIndex,toIndex)) ?? false {
             return
         }
         
+        
+        self.oldIndex = toIndex
         let title = self.optionTitleStrArray[toIndex]
         self.clickOptionCallBack?(option,title,toIndex)
         
-        //如果选中的与现在选中的一致，那么不做selected操作 在了index的计算属性的 setter方法里面设置
-        
         //改变option的状态 （在set方法里做了下部view动画的操作）
         self.selectOptionIndex = toIndex
+        
+        
     }
     
     
@@ -480,3 +487,5 @@ private extension PYToolBarView {
         self.customOptionWhenChangeSelectOptionIndex?(fromOption,toOption,fromIndex,toIndex)
     }
 }
+
+
