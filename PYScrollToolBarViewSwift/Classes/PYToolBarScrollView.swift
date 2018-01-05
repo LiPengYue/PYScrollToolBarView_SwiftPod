@@ -272,7 +272,7 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
         
         
         self.midToolBarView.clickOptionCallBackFunc { [weak self] (button, title, index) in
-            //            self?.setWellScrollViewOffset(wellIndex: self?.midToolBarView.oldIndex ?? 0, frontIndex:self?.midToolBarView.selectOptionIndex ?? 0)
+            self?.setWellScrollViewOffset(wellIndex: self?.midToolBarView.oldIndex ?? 0, frontIndex:self?.midToolBarView.selectOptionIndex ?? 0)
             self?.bottomScrollView.contentOffset = CGPoint(x:CGFloat(index)
                 * (self?.kToolBarScrollViewW)!, y: 0)
         }
@@ -408,7 +408,22 @@ public class PYToolBarScrollView: UIScrollView,UIScrollViewDelegate {
             let frontIndex = midToolBarView.selectOptionIndex
             let bottomViewCont = bottomViewArray.count
             
-            setWellScrollViewOffset(wellIndex: self.midToolBarView.oldIndex,  frontIndex: frontIndex)
+            if indexFloat > CGFloat(frontIndex) {
+                let wellIndex = frontIndex + 1
+                if wellIndex >= bottomViewCont {
+                    return
+                }
+                //表示 index ++ 趋势
+                setWellScrollViewOffset(wellIndex: wellIndex, frontIndex: frontIndex)
+            }else if indexFloat < CGFloat(frontIndex){
+                //表示 index -- 趋势
+                let wellIndex = frontIndex - 1
+                if wellIndex < 0 {
+                    return
+                }
+                setWellScrollViewOffset(wellIndex: wellIndex, frontIndex: frontIndex)
+            }
+            
             let index = round(indexFloat)
             //滚动时候回调
             self.scrollingBottomScrollViewCallBack?(scrollView.contentOffset)
