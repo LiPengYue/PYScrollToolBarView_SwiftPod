@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     ///底部的tableView数组的懒加载
     private lazy var bottomScrollViewArray: [UIScrollView] = {
         let goldCoinMallDecorate = KRGoldCoinMallDecorate(frame: CGRect.zero, style: .plain)
-        
+        goldCoinMallDecorate.backgroundColor = UIColor.white
         let knapsackView = KRKnapsackView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
         
         let scrollArray = [

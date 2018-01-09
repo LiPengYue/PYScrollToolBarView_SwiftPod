@@ -18,9 +18,9 @@
 		8610E8791FF612D100ADAECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E8721FF612D100ADAECC /* AppDelegate.swift */; };
 		8610E87A1FF612D100ADAECC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8731FF612D100ADAECC /* LaunchScreen.xib */; };
 		8610E87B1FF612D100ADAECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8751FF612D100ADAECC /* Main.storyboard */; };
-		8610E87C1FF612D100ADAECC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8771FF612D100ADAECC /* Images.xcassets */; };
 		8610E87D1FF612D100ADAECC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8610E8781FF612D100ADAECC /* Info.plist */; };
 		8610E87F1FF615E700ADAECC /* PYSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610E87E1FF615E700ADAECC /* PYSize.swift */; };
+		86D5A4E71FFF6E7E002458B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D5A4E61FFF6E7E002458B3 /* Images.xcassets */; };
 		AB7D59AAB07B328D52065D31 /* Pods_PYScrollToolBarViewSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CEC92EB448079ECAFC18F6 /* Pods_PYScrollToolBarViewSwift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +54,9 @@
 		8610E8721FF612D100ADAECC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8610E8741FF612D100ADAECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8610E8761FF612D100ADAECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8610E8771FF612D100ADAECC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8610E8781FF612D100ADAECC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8610E87E1FF615E700ADAECC /* PYSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PYSize.swift; sourceTree = "<group>"; };
+		86D5A4E61FFF6E7E002458B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8FB5BC619BCAE6B629522808 /* Pods-PYScrollToolBarViewSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Example/Pods-PYScrollToolBarViewSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A85A22611F507BBA255F9E2D /* Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYScrollToolBarViewSwift_Tests/Pods-PYScrollToolBarViewSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D4B121F491E87BCB8AD4FFF7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				8610E8721FF612D100ADAECC /* AppDelegate.swift */,
 				8610E8731FF612D100ADAECC /* LaunchScreen.xib */,
 				8610E8751FF612D100ADAECC /* Main.storyboard */,
-				8610E8771FF612D100ADAECC /* Images.xcassets */,
+				86D5A4E61FFF6E7E002458B3 /* Images.xcassets */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -286,8 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8610E87A1FF612D100ADAECC /* LaunchScreen.xib in Resources */,
+				86D5A4E71FFF6E7E002458B3 /* Images.xcassets in Resources */,
 				8610E87B1FF612D100ADAECC /* Main.storyboard in Resources */,
-				8610E87C1FF612D100ADAECC /* Images.xcassets in Resources */,
 				8610E87D1FF612D100ADAECC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

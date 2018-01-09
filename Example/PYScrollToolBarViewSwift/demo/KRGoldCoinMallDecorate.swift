@@ -74,7 +74,7 @@ class KRGoldCoinMallDecorate: UITableView,UITableViewDelegate,UITableViewDataSou
     //返回分区头部视图
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HEADERVIEW) ?? UIView()
-        headerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        headerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return headerView
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
