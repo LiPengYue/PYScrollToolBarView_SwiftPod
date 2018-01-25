@@ -91,6 +91,13 @@ public class PYToolBarView: UIView {
     public func clickOptionCallBackFunc(clickOptionCallBack: @escaping (_ option: UIButton, _ optionTitle: String, _ optionIndex: NSInteger) -> Swift.Void){
         self.clickOptionCallBack = clickOptionCallBack
     }
+    
+    /**
+     * 1. willChanageCurrentPageFunc: 点击后 《将要》 改变当前选中按钮 调用的闭包
+     * * fromeIndex: 原始index
+     * * toIndex: 将要选中的index
+     * * return: 是否进行截断，如果返回 为false，则继续调用clickOptionCallBackFunc
+     */
     public func willChanageCurrentPageFunc(_ event:@escaping ((_ fromeIndex:NSInteger, _ toIndex: NSInteger) -> (Bool))) {
         self.willChangeCurrentIndexBlock = event
     }
@@ -191,8 +198,8 @@ public class PYToolBarView: UIView {
             if (_selectOptionIndex == newValue) && !self.isRecurClick{
                 return
             }
-            
-            let fromeIndex: NSInteger = _selectOptionIndex
+            let fromeIndex: NSInteger = self.oldIndex
+            self.oldIndex = _selectOptionIndex;
             _selectOptionIndex = newValue//必须赋值成功
             if self.optionArray.count == 0 {
                 return //表示暂无option
@@ -228,6 +235,32 @@ public class PYToolBarView: UIView {
     ///option是否允许重复点击
     public var isRecurClick: Bool = true
     
+    ///强制执行click button 方法
+    public func enforcement_ClickOption(toIndex: NSInteger) {
+        if toIndex < 0 || toIndex >= self.optionArray.count {
+            print("🌶 数组越界， ‘enforcement_ClickOption(toIndex: NSInteger)’ 传入的index越界了 <toIndex=\(toIndex)>")
+            return
+        }
+        let option = self.optionArray[toIndex]
+        //不允许重复点击 放到了index的计算属性的setter方法里
+        if (option == self.selectOption) && !self.isRecurClick{
+            return
+        }
+        
+        //将要改变当前选中button的方法
+        let fromIndex: NSInteger = self.selectOption.tag - toolBarViewOptionTagBasis
+        if (self.willChangeCurrentIndexBlock?(fromIndex,toIndex)) ?? false {
+            return
+        }
+        
+        let title = self.optionTitleStrArray[toIndex]
+        self.clickOptionCallBack?(option,title,toIndex)
+        
+        //如果选中的与现在选中的一致，那么不做selected操作 在了index的计算属性的 setter方法里面设置
+        
+        //改变option的状态 （在set方法里做了下部view动画的操作）
+        self.selectOptionIndex = toIndex
+    }
     
     //MARK: ------------- 关于自定义动画的属性 ------------------------
     ///动画的View
@@ -430,34 +463,33 @@ private extension PYToolBarView {
     
     //MARK: 点击事件的添加
     @objc private func clickOption(tap: UITapGestureRecognizer) {
-        
         let option: UIButton = tap.view as! UIButton
+        clickButton(button: option)
+    }
+    
+    private func clickButton(button: UIButton) {
+        let option: UIButton = button
         //不允许重复点击 放到了index的计算属性的setter方法里
         if (option == self.selectOption) && !self.isRecurClick{
             return
         }
         
         //将要改变当前选中button的方法
-        let fromIndex: NSInteger = self.selectOption.tag - toolBarViewOptionTagBasis
+        //        let fromIndex: NSInteger = self.selectOption.tag - toolBarViewOptionTagBasis
         let toIndex: NSInteger = option.tag - toolBarViewOptionTagBasis
-        
-        //如果选中的与现在选中的一致，那么不做selected操作 在了index的计算属性的 setter方法里面设置
-        if (self.willChangeCurrentIndexBlock?(fromIndex,toIndex)) ?? false {
-            return
-        }
-        
-        
-        self.oldIndex = toIndex
-        let title = self.optionTitleStrArray[toIndex]
-        self.clickOptionCallBack?(option,title,toIndex)
-        
-        //改变option的状态 （在set方法里做了下部view动画的操作）
-        self.selectOptionIndex = toIndex
-        
-        
+        self.enforcement_ClickOption(toIndex: toIndex)
+        //        if (self.willChangeCurrentIndexBlock?(fromIndex,toIndex)) ?? false {
+        //            return
+        //        }
+        //
+        //        let title = self.optionTitleStrArray[toIndex]
+        //        self.clickOptionCallBack?(option,title,toIndex)
+        //
+        //        //如果选中的与现在选中的一致，那么不做selected操作 在了index的计算属性的 setter方法里面设置
+        //
+        //        //改变option的状态 （在set方法里做了下部view动画的操作）
+        //        self.selectOptionIndex = toIndex
     }
-    
-    
     
     //MARK: animaIndicatorBar 动画指示条
     func animaIndicatorBar() {
@@ -486,6 +518,9 @@ private extension PYToolBarView {
         //执行动画
         self.customOptionWhenChangeSelectOptionIndex?(fromOption,toOption,fromIndex,toIndex)
     }
+    override public var intrinsicContentSize: CGSize {
+        get{
+            return UILayoutFittingExpandedSize
+        }
+    }
 }
-
-
